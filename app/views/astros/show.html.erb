@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @astro.nombre %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <% @tipo.each do |t| %>
+    <% if @astro.tipo_id == t.id %>
+          <%= t.tipo %>
+    <% end %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Distancia:</strong>
+  <%= @astro.distancia %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @astro.descripcion %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @astro.fecha %>
+</p>
+
+<%= link_to 'Editar', edit_astro_path(@astro) %> |
+<%= link_to 'Atras', astros_path %>

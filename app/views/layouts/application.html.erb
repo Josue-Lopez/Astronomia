@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Astronomia</title>
+    <%= csrf_meta_tags %>
+       <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  	
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+
+  <ul class="nav justify-content-center sticky-top" id="colores">
+  <li class="nav-item">
+    <a class="nav-link" href="/astros" id="texto">Ver Astros</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="/astros/new" id="texto">Agregar Astros</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/tipos/new" id="texto">Agregar Tipo</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/tipos" id="texto">Ver Tipo</a>
+  </li>
+</ul>
+  <hr>
+
+
+
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+   
+  <div class="container">
+
+  	<%= yield %>	
+  </div>
+  </body>
+
+
+
+  <hr>
+<footer style="padding-bottom: 0;">
+    <div class="container">
+        <div class="row middle-xs between-xs">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-sm-offset-2">
+                <div class="logo">Josue Lopez.</div>
+            </div>              
+           
+        </div>
+    </div>
+</footer>
+</html>

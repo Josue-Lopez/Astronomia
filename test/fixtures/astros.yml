@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  tipo_id: 1
+  distancia: MyString
+  descripcion: MyText
+  fecha: 2017-08-16
+
+two:
+  nombre: MyString
+  tipo_id: 1
+  distancia: MyString
+  descripcion: MyText
+  fecha: 2017-08-16

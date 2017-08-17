@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Astros</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Distancia</th>
+      <th>Descripcion</th>
+      <th>Fecha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @astros.each do |astro| %>
+        <% @tipo.each do |t| %>
+
+        <% if t.id == astro.tipo_id %>
+        <tr>
+        <td><%= astro.nombre %></td>
+        <td><%= t.tipo %></td>
+        <td><%= astro.distancia %></td>
+        <td><%= astro.descripcion %></td>
+        <td><%= astro.fecha %></td>
+        <td><%= link_to 'Ver', astro %></td>
+        <td><%= link_to 'Editar', edit_astro_path(astro) %></td>
+        <td><%= link_to 'Eliminar', astro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      
+        <% end %>
+    <% end %>
+        <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'Agregar nuevo astro', new_astro_path %>
